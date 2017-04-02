@@ -21,6 +21,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem "database_cleaner"
   gem "rspec-rails"
+  gem "fakeredis", :require => "fakeredis/rspec"
 end
 
 group :development do
