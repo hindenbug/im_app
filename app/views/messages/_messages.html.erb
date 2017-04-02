@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Messages</div>
+  <div class="panel-body">
+    <div id="messages" class="form-control" style="height: 500px; min-width: 100%"></div>
+  </div>
+
+  <div class="panel-footer">
+    <%= form_for Message.new, remote: true do |f| %>
+      <%= f.hidden_field :dialect, value: current_user.dialect %>
+      <%= f.text_area :content, id: "msg-body", autofocus: true, class: "form-control" %>
+      <%= f.submit "Send", class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>

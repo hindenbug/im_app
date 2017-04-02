@@ -25,6 +25,8 @@ class SessionsController < ApplicationController
       cookies.signed[:dialect] = params[:session][:dialect]
       $redis.hmset("user:#{cookies.signed[:user_id]}", "username", cookies.signed[:username],
                    "joined_at", Time.now.to_i)
+    else
+      flash[:error] = "Please provide a user name"
     end
   end
 

@@ -1,22 +1,28 @@
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-5 col-md-offset-2">
+    <%= render partial: 'layouts/errors'%>
 
-    <h2 id="log-in-title">Enter a username:</h2>
+    <h3 id="log-in-title">Provide a username to proceed</h3>
+
     <div class="auth-form well">
       <%= form_for :session, url: sessions_path do |f| %>
 
-      <%= f.select "dialect", options_for_select(["Yoda", "Valley Girl", "Binary"], "Yoda") %>
+        <label>Username</label>
+        <div class="input-group">
+          <span class="input-group-addon">@</span>
+          <%= f.text_field :username, placeholder: 'username', class: "form-control"%>
+        </div>
 
-      <div class="input-group">
-        <span class="input-group-addon">@</span>
-        <%= f.text_field :username, placeholder: 'username', class: "form-control"%>
-      </div>
+        <label>Dialect</label>
+        <div class="input-group">
+          <%= f.select "dialect", options_for_select(["Yoda", "Valley Girl", "Binary"], "Yoda"), {}, class: "form-control input-small" %>
+        </div>
 
-      <div class="actions">
-        <%= f.submit "Enter", class: "btn btn-primary" %>
-      </div>
-    <% end %>
+        <div class="control-group">
+          <%= f.submit "Enter", class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
-    <%= render partial: 'layouts/errors'%>
+
   </div>
 </div>
