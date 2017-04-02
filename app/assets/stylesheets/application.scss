@@ -1,0 +1,26 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.message-dialect-icon {
+  display: block;
+  float: right;
+  width: 24px;
+  height: 24px;
+}
+
+.binary-dialect-icon {
+  background-image: image-url("binary.png");
+  background-size: 24px 24px;
+}
+
+.yoda-dialect-icon {
+  background-image: image-url("yoda.png");
+  background-size: 24px 24px;
+}
+
+
+.valley-girl-dialect-icon {
+  background-image: image-url("valley.png");
+  background-size: 24px 24px;
+
+}
