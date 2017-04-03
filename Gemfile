@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'redis', '~>3.2'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'byebug', platform: :mri

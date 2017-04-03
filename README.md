@@ -28,17 +28,22 @@ The source urls for the API dialects:
 * Redis
 * ActiveModel (No model persistance required)
 * ActionCable
-* ActiveJob (for sending messages asynchronously)
+* Sidekiq (for sending messages asynchronously)
 * Ruby's native Net::HTTP
 * Rspec for Unit Testing
 * Bootstrap for themeing
 
 ## Run locally
 
+    $ git clone https://github.com/hindenbug/im_app.git
+    $ cd im_app
+
     $ brew install redis
     $ redis-server&
 
     $ bundle install
+    $ bundle exec sidekiq&
+
     $ bundle exec rails s
 
 ## Run tests

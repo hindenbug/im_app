@@ -27,5 +27,6 @@ module ImApp
     end
 
     config.eager_load_paths << "#{Rails.root}/lib/"
+    config.active_job.queue_adapter = :sidekiq
   end
 end
