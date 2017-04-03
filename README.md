@@ -22,7 +22,7 @@ The source urls for the API dialects:
 * Dialect can be change in between messages, from the dialect dropdown
 * Displaying currently active user list
 
-## Tools
+## Dependencies
 * Rails 5
 * Ruby 2.3.x
 * Redis
@@ -34,6 +34,9 @@ The source urls for the API dialects:
 * Bootstrap for themeing
 
 ## Run locally
+
+    $ brew install redis
+    $ redis-server&
 
     $ bundle install
     $ bundle exec rails s
